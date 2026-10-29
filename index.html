@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Vanamala Nagarjuna – Aspiring Software Engineer | Java, SQL, DSA | MCA Data Science"
+    />
+    <link rel="icon" href="/photo.jpg" />
+    <title>Vanamala Nagarjuna | Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        background: #070b18;
+      }
+      .boot {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 18px;
+        background: #070b18;
+        color: #a3aed0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        opacity: 0;
+        animation: bootin 0.3s 0.9s forwards;
+      }
+      .boot.now {
+        opacity: 1;
+        animation: none;
+      }
+      @keyframes bootin {
+        to {
+          opacity: 1;
+        }
+      }
+      .boot .sky {
+        position: relative;
+        width: min(420px, 86vw);
+        height: 130px;
+        overflow: hidden;
+        border-radius: 18px;
+        background: linear-gradient(#0e1a3d, #1b2a63 70%, #2d3f86);
+      }
+      .boot .cl {
+        position: absolute;
+        font-size: 2.6rem;
+        opacity: 0.85;
+        left: 100%;
+        animation: drift 9s linear infinite;
+      }
+      .boot .c1 {
+        top: 6px;
+      }
+      .boot .c2 {
+        top: 44px;
+        animation-duration: 6s;
+        animation-delay: -3s;
+        font-size: 1.8rem;
+        opacity: 0.6;
+      }
+      .boot .c3 {
+        top: 0;
+        animation-duration: 12s;
+        animation-delay: -6s;
+        font-size: 3.2rem;
+        opacity: 0.4;
+      }
+      @keyframes drift {
+        to {
+          left: -20%;
+        }
+      }
+      .boot .ground {
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        white-space: nowrap;
+        font-size: 2rem;
+        line-height: 1;
+        animation: gl 3s linear infinite;
+      }
+      @keyframes gl {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .boot .rat {
+        position: absolute;
+        left: 50%;
+        bottom: 24px;
+        font-size: 2.4rem;
+        line-height: 1;
+        margin-left: -1.2rem;
+        animation: hop 0.45s ease-in-out infinite;
+      }
+      @keyframes hop {
+        50% {
+          transform: translateY(-14px) rotate(-8deg);
+        }
+      }
+      .boot p {
+        margin: 0;
+        letter-spacing: 0.04em;
+      }
+      .boot .dots::after {
+        content: "";
+        animation: dt 1.2s steps(1) infinite;
+      }
+      @keyframes dt {
+        25% {
+          content: ".";
+        }
+        50% {
+          content: "..";
+        }
+        75% {
+          content: "...";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot">
+        <div class="sky">
+          <span class="cl c1">☁️</span><span class="cl c2">☁️</span
+          ><span class="cl c3">☁️</span>
+          <div class="ground">☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️</div>
+          <div class="rat">🐀</div>
+        </div>
+        <p>Loading portfolio<span class="dots"></span></p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
